@@ -1,0 +1,151 @@
+ $Second: #F5F5F5ff;
+ $Third: #42B62Bff;
+  $Fourth: #0967FFff;
+  $Fifth: #1C1F20ff;
+html{
+    scroll-behavior: smooth;
+}
+  *{
+    padding: 0%;
+    margin: 0;
+    body{
+        font-family: "Oswald", sans-serif;
+        font-optical-sizing: auto;
+        font-weight:  normal;
+        font-style: normal;
+    }
+
+  }
+  .navbar{
+    background-color: $Second;
+    display: flex;
+  justify-content: center;
+    height: 7%;
+ 
+    ul{
+        list-style: none;
+        background-color: $Fifth;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        border-bottom: 3px solid rgb(0, 0, 0);
+        height: 7%;
+        width: 25%;
+  
+        
+        li{
+            transition: 0.6s;
+            &:hover{
+                transform: translateY(4px);
+            }
+            a{
+                text-decoration: none;
+                color: $Second;
+                width: 5%;
+               padding: 5px 20px;
+                text-align: center;
+                transition: 0.7s;
+                border-radius: 3px;
+                font-size: 100%;
+                &:hover{
+                    background-color: $Fourth;
+                    color: $Second;
+                    opacity: 90%;
+                    
+                }
+            }
+        }
+    }
+  }
+
+.home{
+    display: flex;
+    justify-content: start;
+   height: 80vh;
+    width: 100%;
+    
+    align-items: center;
+    .box1{
+        padding: 1% 1%;
+        display: flex;
+        flex-direction: column;
+       align-items: center;
+        justify-content: center;
+        width: 50%;
+        height: 50%;
+        font-size: 100%;
+        animation-name: LtoR;
+        animation-duration: 1.5s;
+    }
+    .box2{
+        padding: 1% 1%;
+        display: flex;
+        flex-direction: column;
+       align-items: center;
+        justify-content: center;
+        width: 50%;
+        height: auto;
+       
+        .img{
+            border-radius: 100%;
+            overflow: hidden;
+            animation-name: opacityapp;
+            animation-duration: 2s;
+      
+            img{
+                height: 300px;
+                transition: 1s;
+                cursor: pointer;
+                &:hover{
+                    transform: scale(110%);
+                }
+            }
+        }
+        
+    }
+}
+
+
+#aboutme{
+    margin-top: 10%;
+    display: flex;
+    justify-content: start;
+   height: 80vh;
+   background-color: $Fifth;
+    width: 100%;
+    align-items: center;
+    .content{
+       
+        padding: 1% 1%;
+        display: flex;
+        flex-direction: column;
+       align-items: center;
+        justify-content: center;
+        width: 50%;
+        height: auto;
+        font-size: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+@keyframes LtoR{
+    from{
+        transform: translateX(-900px);
+        filter: blur(3px);
+    }
+    to{
+        transform: translateX(0);
+        filter: blur(0);
+    }
+}
+
+
+ 

@@ -1,0 +1,127 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0%;
+  margin: 0;
+}
+* body {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.navbar {
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  height: 7%;
+}
+.navbar ul {
+  list-style: none;
+  background-color: #1c1f20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  border-bottom: 3px solid rgb(0, 0, 0);
+  height: 7%;
+  width: 25%;
+}
+.navbar ul li {
+  transition: 0.6s;
+}
+.navbar ul li:hover {
+  transform: translateY(4px);
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: whitesmoke;
+  width: 5%;
+  padding: 5px 20px;
+  text-align: center;
+  transition: 0.7s;
+  border-radius: 3px;
+  font-size: 100%;
+}
+.navbar ul li a:hover {
+  background-color: #0967ff;
+  color: whitesmoke;
+  opacity: 90%;
+}
+
+.home {
+  display: flex;
+  justify-content: start;
+  height: 80vh;
+  width: 100%;
+  align-items: center;
+}
+.home .box1 {
+  padding: 1% 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 50%;
+  font-size: 100%;
+  animation-name: LtoR;
+  animation-duration: 1.5s;
+}
+.home .box2 {
+  padding: 1% 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: auto;
+}
+.home .box2 .img {
+  border-radius: 100%;
+  overflow: hidden;
+  animation-name: opacityapp;
+  animation-duration: 2s;
+}
+.home .box2 .img img {
+  height: 300px;
+  transition: 1s;
+  cursor: pointer;
+}
+.home .box2 .img img:hover {
+  transform: scale(110%);
+}
+
+#aboutme {
+  margin-top: 10%;
+  display: flex;
+  justify-content: start;
+  height: 80vh;
+  background-color: #1c1f20;
+  width: 100%;
+  align-items: center;
+}
+#aboutme .content {
+  padding: 1% 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: auto;
+  font-size: 100%;
+}
+
+@keyframes LtoR {
+  from {
+    transform: translateX(-900px);
+    filter: blur(3px);
+  }
+  to {
+    transform: translateX(0);
+    filter: blur(0);
+  }
+}/*# sourceMappingURL=style.css.map */
