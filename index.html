@@ -1,44 +1,132 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Helder Ribeiro Lagrisola</title>
-  </head>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
-  </style>
-  <body>
-    <header class="navbar">
-    
-      <ul>
-        <li><a href="#CABOUTME">ABOUT ME</a></li>
-        <li><a href="">PORTFOLIO</a></li>
-        <li><a href="">CONTACT ME</a></li>
-      </ul>
-    </header>
 
-    <div class="home">
-      <div class="box1">
-<h1>Hi! I'M HELDER LAGRISOLA</h1>
-<h2>A FRONT END WEB DEVELOPER.</h2>
-<p style="text-align: center;max-width: 600px;">I transform designs into captivating online experiences with HTML, CSS, JavaScript, Bootstrap and other frameworks expertise.</p>
-      </div>
-      <div class="box2">
-        <div class="img">
-          <img src="img/Helder.jpg" alt="Helder">
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Helder Ribeiro Lagrisola</title>
+</head>
+<link rel="stylesheet" href="style.css" />
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+</style>
+
+<body>
+  <header class="navbar">
+
+    <ul>
+      <li><a href="#">HOME</a></li>
+      <li><a href="#CABOUTME">ABOUT ME</a></li>
+      <li><a href="#PORTFOLIO">PORTFOLIO</a></li>
+      <li><a href="#CONTACTME">CONTACT ME</a></li>
+    </ul>
+  </header>
+
+  <div class="home">
+    <div class="box1">
+      <h1>Hi! I'M HELDER LAGRISOLA</h1>
+      <h2>A FRONT END WEB DEVELOPER.</h2>
+      <p style="text-align: center;max-width: 600px;">I transform designs into captivating online experiences with HTML,
+        CSS, JavaScript, Bootstrap and other frameworks expertise.</p>
+    </div>
+    <div class="box2">
+      <div class="img">
+        <img src="img/Helder.jpg" alt="Helder">
       </div>
     </div>
+  </div>
 
 
-    <div id="aboutme">
+  <div id="aboutme">
 
-    <hr id="CABOUTME">
-      <div class="content">
+    <br>
+    <div class="box1">
+      <hr style="opacity: 0;" id="CABOUTME">
+      <h1 style="border-bottom: 1px dotted white;">ABOUT ME </h1>
+      <br>
+
+      <p> I’m Helder Lagrisola, originally from Timor-Leste and now living in England since December 2022. I have a
+        strong passion for football, mobile gaming, and always learning new things in my free time.
+
+        My interest in web development began in high school back in Timor-Leste in 2021. I taught myself the basics
+        using online resources, creating simple web pages that sparked my excitement for the field. Although I pursued
+        web development on and off, those early experiences built a solid foundation for my skills.
+
+        Now, with more structured education and a deeper understanding of web development, I’m eager to demonstrate my
+        capabilities and make meaningful contributions to the digital world.
+      </p>
+      <br>
+      <h1 style="border-bottom: 1px dotted white;">SKILLS</h1>
+    </div>
+  </div>
+
+  <div class="portfolio">
+    <hr style="opacity: 0;" id="PORTFOLIO">
+    <br><br><br>
+<h1>MY PORTFOLIO</h1>
+
+    
+<div class="slider-container">
+  <div class="slider">
+    <div class="slide"><img src="img/webex1.png" alt="Image 1"></div>
+    <div class="slide"><img src="img/image.png" alt="Image 2"></div>
+    <div class="slide"><img src="img/image2.png" alt="Image 3"></div>
+  </div>
+</div>
+
+<div class="slider-nav">
+  <br>
+  <a href="#">VISIT THE WEBSITE</a>
+  <button onclick="prevSlide()"><</button>
+  <button onclick="nextSlide()">></button>
+
+  <br><br><br><br>
+  
+</div>
 
 
 
-     
-  </body>
+
+  </div>
+
+
+  <div id="CONTACTME" class="contactme">
+
+  </div>
+
+<script>
+   let currentSlide = 0;
+  const slides = document.querySelectorAll('.slide');
+
+  function showSlide(index) {
+    // Hide all slides
+    slides.forEach(slide => {
+      slide.style.display = 'none';
+    });
+
+    // Display the selected slide
+    slides[index].style.display = 'block';
+  }
+
+  function nextSlide() {
+    currentSlide++;
+    if (currentSlide >= slides.length) {
+      currentSlide = 0;
+    }
+    showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide--;
+    if (currentSlide < 0) {
+      currentSlide = slides.length - 1;
+    }
+    showSlide(currentSlide);
+  }
+
+  // Show the initial slide
+  showSlide(currentSlide);
+</script>
+
+</body>
+
 </html>

@@ -14,7 +14,7 @@ html {
 }
 
 .navbar {
-  background-color: whitesmoke;
+  background-color: white;
   display: flex;
   justify-content: center;
   height: 7%;
@@ -26,9 +26,11 @@ html {
   justify-content: center;
   align-items: center;
   position: fixed;
-  border-bottom: 3px solid rgb(0, 0, 0);
+  border-bottom: 3px solid rgb(63, 63, 63);
+  border-right: 3px solid rgb(63, 63, 63);
+  border-left: 3px solid rgb(63, 63, 63);
   height: 7%;
-  width: 25%;
+  width: 30%;
 }
 .navbar ul li {
   transition: 0.6s;
@@ -97,22 +99,83 @@ html {
 
 #aboutme {
   margin-top: 10%;
+  border-top: 5px solid #1c1f20;
   display: flex;
   justify-content: start;
-  height: 80vh;
+  height: 100%;
   background-color: #1c1f20;
   width: 100%;
-  align-items: center;
+  color: white;
 }
-#aboutme .content {
-  padding: 1% 1%;
+#aboutme .box1 {
+  height: 50%;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 5%;
+}
+
+.portfolio {
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 50%;
-  height: auto;
-  font-size: 100%;
+  text-align: center;
+  color: white;
+  width: 100%;
+  background-color: #1c1f20;
+  border-top: 5px solid #1c1f20;
+}
+.portfolio .slider-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+}
+.portfolio .slider {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.portfolio .slide {
+  flex: 0 0 100%;
+}
+.portfolio .slider-nav {
+  text-align: center;
+  margin-top: 10px;
+}
+.portfolio .slider-nav a {
+  color: white;
+  text-decoration: none;
+  transition: 0.5s;
+  padding: 10px 10px;
+}
+.portfolio .slider-nav a:hover {
+  background-color: #0967ff;
+}
+.portfolio .slider-nav button {
+  background-color: #0967ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.4s;
+  margin: 0 5px;
+}
+.portfolio .slider-nav button:hover {
+  opacity: 70%;
+}
+.portfolio img {
+  height: 500px;
+  width: 600px;
+}
+
+.contactme {
+  height: 100%;
+  width: 100%;
+  background-color: white;
 }
 
 @keyframes LtoR {
