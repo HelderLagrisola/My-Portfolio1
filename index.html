@@ -6,6 +6,7 @@
   <title>Helder Ribeiro Lagrisola</title>
 </head>
 <link rel="stylesheet" href="style.css" />
+<script src="js/main.js"></script>t
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
 </style>
@@ -92,40 +93,6 @@
   <div id="CONTACTME" class="contactme">
 
   </div>
-
-<script>
-   let currentSlide = 0;
-  const slides = document.querySelectorAll('.slide');
-
-  function showSlide(index) {
-    // Hide all slides
-    slides.forEach(slide => {
-      slide.style.display = 'none';
-    });
-
-    // Display the selected slide
-    slides[index].style.display = 'block';
-  }
-
-  function nextSlide() {
-    currentSlide++;
-    if (currentSlide >= slides.length) {
-      currentSlide = 0;
-    }
-    showSlide(currentSlide);
-  }
-
-  function prevSlide() {
-    currentSlide--;
-    if (currentSlide < 0) {
-      currentSlide = slides.length - 1;
-    }
-    showSlide(currentSlide);
-  }
-
-  // Show the initial slide
-  showSlide(currentSlide);
-</script>
 
 </body>
 
