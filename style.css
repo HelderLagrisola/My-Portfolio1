@@ -15,6 +15,7 @@ html {
 
 .navbar {
   background-color: white;
+  margin: 0;
   display: flex;
   justify-content: center;
   height: 7%;
@@ -26,9 +27,9 @@ html {
   justify-content: center;
   align-items: center;
   position: fixed;
-  border-bottom: 3px solid rgb(63, 63, 63);
-  border-right: 3px solid rgb(63, 63, 63);
-  border-left: 3px solid rgb(63, 63, 63);
+  border: 3px solid rgb(63, 63, 63);
+  margin: 0;
+  padding: 0;
   height: 7%;
   width: 30%;
   z-index: 999;
@@ -100,13 +101,13 @@ html {
 
 #aboutme {
   margin-top: 10%;
-  border-top: 5px solid #1c1f20;
+  z-index: 999;
   display: flex;
   justify-content: start;
   height: 100%;
-  background-color: #1c1f20;
+  background-color: white;
   width: 100%;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 #aboutme .box1 {
   height: 50%;
@@ -116,6 +117,17 @@ html {
   flex-direction: column;
   margin-left: 5%;
 }
+#aboutme .box1 .img {
+  display: flex;
+}
+#aboutme .box1 .img img {
+  height: 15%;
+  transition: 0.5s;
+  width: auto;
+}
+#aboutme .box1 .img img:hover {
+  transform: scale(110%);
+}
 
 .portfolio {
   height: 100%;
@@ -124,53 +136,6 @@ html {
   text-align: center;
   color: white;
   width: 100%;
-  background-color: #1c1f20;
-  border-top: 5px solid #1c1f20;
-}
-.portfolio .slider-container {
-  display: flex;
-  flex-direction: column;
-  max-width: 600px;
-  margin: auto;
-  overflow: hidden;
-  position: relative;
-}
-.portfolio .slider {
-  display: flex;
-  transition: transform 0.5s ease;
-}
-.portfolio .slide {
-  flex: 0 0 100%;
-}
-.portfolio .slider-nav {
-  text-align: center;
-  margin-top: 10px;
-}
-.portfolio .slider-nav a {
-  color: white;
-  text-decoration: none;
-  transition: 0.5s;
-  padding: 10px 10px;
-}
-.portfolio .slider-nav a:hover {
-  background-color: #0967ff;
-}
-.portfolio .slider-nav button {
-  background-color: #0967ff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: 0.4s;
-  margin: 0 5px;
-}
-.portfolio .slider-nav button:hover {
-  opacity: 70%;
-}
-.portfolio img {
-  height: 500px;
-  width: 600px;
 }
 
 .contactme {

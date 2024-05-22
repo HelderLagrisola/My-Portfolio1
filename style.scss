@@ -18,9 +18,11 @@ html{
   }
   .navbar{
     background-color: white;
+    margin: 0;
     display: flex;
   justify-content: center;
     height: 7%;
+ 
  
     ul{
         list-style: none;
@@ -29,10 +31,10 @@ html{
         justify-content: center;
         align-items: center;
         position: fixed;
-        border-bottom: 3px solid rgb(63, 63, 63);
-        border-right: 3px solid rgb(63, 63, 63);
-        border-left: 3px solid rgb(63, 63, 63);
-        height: 7%;
+        border: 3px solid rgb(63, 63, 63);
+       margin: 0;
+       padding: 0;
+         height: 7%;
         width:30%;
         z-index: 999;
   
@@ -112,15 +114,16 @@ html{
 
 #aboutme{
     margin-top: 10%;
-    border-top: 5px solid $Fifth;
+    z-index: 999;
+ 
     display: flex;
     justify-content: start;
    
    height: 100%;
-   background-color: $Fifth;
+ background-color: white;
     width: 100%;
     
- color: white;
+ color: rgb(0, 0, 0);
  .box1{
     height: 50%;
     width: 40%;
@@ -128,6 +131,17 @@ html{
     align-items: center;
     flex-direction: column;
  margin-left: 5%;
+ .img{
+  display: flex; 
+  img{
+    height: 15%;
+    transition: 0.5s;
+    width: auto;
+    &:hover{
+      transform: scale(110%);
+    }
+  }
+ }
  }
 }
 
@@ -143,66 +157,8 @@ html{
     text-align: center;
     color: white;
     width: 100%;
-    background-color: $Fifth;
-    border-top: 5px solid $Fifth;
  
-    .slider-container {
-        display: flex;
-        flex-direction: column;
-      max-width: 600px;
-      margin: auto;
-      overflow: hidden;
-      position: relative;
-    }
-  
-    
-    .slider {
-      display: flex;
-      transition: transform 0.5s ease;
-    }
-  
-  
-    .slide {
-      flex: 0 0 100%;
-    }
-  
-    
-    .slider-nav {
-      text-align: center;
-      a{
-        color: white;
-        text-decoration: none;
-        transition: 0.5s;
-        padding: 10px 10px;
-        &:hover{
-            background-color: $Fourth;
-             
-        }
-        
-    }
-      margin-top: 10px;
-    }
-  
-    .slider-nav button {
-      background-color: $Fourth;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      padding: 10px 20px;
-      cursor: pointer;
-      transition: 0.4s;
-      margin: 0 5px;
-      
-      &:hover{
-        opacity: 70%;
-         
-      }
-    }
-    img{
-        height: 500px;
-        width:  600px;
 
-    }
 }
 
 
@@ -228,4 +184,4 @@ html{
 }
 
 
- 
+  
