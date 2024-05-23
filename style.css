@@ -119,10 +119,14 @@ html {
 }
 #aboutme .box1 .img {
   display: flex;
+  padding: 5% 5%;
+  padding-top: 0;
+  width: auto;
 }
 #aboutme .box1 .img img {
   height: 15%;
   transition: 0.5s;
+  padding: 5%;
   width: auto;
 }
 #aboutme .box1 .img img:hover {

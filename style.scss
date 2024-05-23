@@ -133,9 +133,14 @@ html{
  margin-left: 5%;
  .img{
   display: flex; 
+  padding: 5% 5%;
+  padding-top: 0;
+  width: auto;
+  
   img{
     height: 15%;
     transition: 0.5s;
+    padding: 5%;
     width: auto;
     &:hover{
       transform: scale(110%);
