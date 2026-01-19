@@ -1,90 +1,99 @@
-<html lang="en">
-
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Helder Ribeiro Lagrisola</title>
+  <title>Helder Ribeiro Lagrisola | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+    body { font-family: 'Oswald', sans-serif; }
+    .grayscale-filter { filter: grayscale(100%); transition: filter 0.3s ease; }
+    .grayscale-filter:hover { filter: grayscale(0%); }
+    .border-black-thick { border-bottom: 3px solid black; }
+  </style>
 </head>
-<link rel="stylesheet" href="style.css" />
-<script src="https://cdn.tailwindcss.com"></script>
- 
-<style>
-  @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
-</style>
 
-<body>
-  <header class="bg-white  fixed text-black  flex justify-center p-4 fixed w-full top-0 left-0 z-10 shadow-sm">
+<body class="bg-white text-black">
 
-    <ul class="flex gap-10">
- 
-      <li><a class="link" href="#CABOUTME">About me</a></li>
-      <li><a class="link" href="#PORTFOLIO">Portfolio</a></li>
-      <li><a class="link" href="#CONTACTME">Contact me</a></li>
-    </ul>
+  <header class="fixed w-full top-0 left-0 z-50 bg-white border-b border-black">
+    <nav class="max-w-6xl mx-auto flex justify-between items-center p-6">
+      <span class="font-bold tracking-tighter text-xl">HRL.</span>
+      <ul class="flex gap-10 uppercase text-sm font-medium">
+        <li><a class="hover:line-through" href="#home">Home</a></li>
+        <li><a class="hover:line-through" href="#aboutme">About</a></li>
+        <li><a class="hover:line-through" href="#portfolio">Portfolio</a></li>
+        <li><a class="hover:line-through" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <div class="h-screen flex  items-center justify-center text-center gap-20" id="home">
-    <div class="w-1/2 flex max-w-md flex-col gap-4">
-    <h1 class="text-2xl font-semibold">Helder Ribeiro Lagrisola</h1>
-      <h2 class="text-lg font-semibold text-gray-600">Front End Developer.</h2>
-      <p class="text-sm text-gray-500 font-semibold  text-center">I transform designs into captivating online experiences with HTML,
-        CSS, JavaScript, Bootstrap and other frameworks expertise.</p>
-    </div>
-    <div class="w-1/4 h-fit rounded-full overflow-hidden border-4 border-white shadow-lg">
-      <div class="img">
-        <img src="img/Helder.jpg" alt="Helder">
-      </div>
-    </div>
-  </div>
-
-
-  <div id="aboutme">
-
-    <br>
-    <div class="box1">
-      <hr style="opacity: 0;" id="CABOUTME">
-      <br><br><br><br>
-      
-      <h1 style="border-bottom: 1px dotted white;">ABOUT ME </h1>
-      <br>
-
-      <p> I’m Helder Lagrisola, originally from Timor-Leste and now living in England since December 2022. I have a
-        strong passion for football, mobile gaming, and always learning new things in my free time.
-
-        My interest in web development began in high school back in Timor-Leste in 2021. I taught myself the basics
-        using online resources, creating simple web pages that sparked my excitement for the field. Although I pursued
-        web development on and off, those early experiences built a solid foundation for my skills.
-
-        Now, with more structured education and a deeper understanding of web development, I’m eager to demonstrate my
-        capabilities and make meaningful contributions to the digital world.
+  <section id="home" class="h-screen flex flex-col md:flex-row items-center justify-center px-10 gap-16">
+    <div class="max-w-xl space-y-4 text-center md:text-left">
+      <h1 class="text-6xl font-bold uppercase leading-none">Helder Ribeiro Lagrisola</h1>
+      <h2 class="text-2xl tracking-widest text-gray-500 uppercase">Front End Developer</h2>
+      <p class="text-lg leading-relaxed border-l-4 border-black pl-4">
+        I transform designs into captivating online experiences with HTML, CSS, JavaScript, and modern frameworks.
       </p>
-      <br>
-      <h1 style="border-bottom: 1px dotted white;">SKILLS</h1>
-      
-      <div class="img">
-        
-        <a target="_blank" href="https://en.wikipedia.org/wiki/HTML"><img src="img/icons8-html-480.png"></a>
-        <a href="https://en.wikipedia.org/wiki/CSS" target="_blank"> <img src="img/icons8-css-480.png"></a>
-        <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank"> <img src="img/icons8-javascript-480.png"></a>
-        <a href="https://en.wikipedia.org/wiki/Sass_(style_sheet_language)" target="_blank">  <img src="img/icons8-sass-a-style-sheet-professional-grade-css-extension-language-96.png"></a>
+    </div>
+    <div class="w-64 h-64 grayscale-filter border-4 border-black overflow-hidden shadow-[10px_10px_0px_0px_rgba(0,0,0,1)]">
+      <img src="img/Helder.jpg" alt="Helder" class="object-cover w-full h-full">
+    </div>
+  </section>
+
+  <section id="aboutme" class="py-24 bg-black text-white">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-4xl font-bold uppercase mb-8 border-b border-white pb-2 inline-block">About Me</h2>
+      <p class="text-xl leading-relaxed font-light mb-12">
+        I’m Helder Lagrisola, originally from Timor-Leste and now living in England since December 2022. 
+        I have a strong passion for football, mobile gaming, and always learning new things. 
+        My journey in code began in 2021, and today I focus on building clean, functional, and meaningful digital contributions.
+      </p>
+
+      <h2 class="text-4xl font-bold uppercase mb-8 border-b border-white pb-2 inline-block">Technical Skills</h2>
+      <div class="flex flex-wrap gap-12 items-center invert opacity-80">
+        <a href="#" class="hover:opacity-100 transition-opacity"><img src="img/icons8-html-480.png" class="w-16" alt="HTML"></a>
+        <a href="#" class="hover:opacity-100 transition-opacity"><img src="img/icons8-css-480.png" class="w-16" alt="CSS"></a>
+        <a href="#" class="hover:opacity-100 transition-opacity"><img src="img/icons8-javascript-480.png" class="w-16" alt="JS"></a>
+        <a href="#" class="hover:opacity-100 transition-opacity"><img src="img/icons8-sass-a-style-sheet-professional-grade-css-extension-language-96.png" class="w-16" alt="SASS"></a>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="portfolio">
-    <br>
-    <br>
-    <br>
-    <hr style="opacity: 0;" id="PORTFOLIO">
+  <section id="portfolio" class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-5xl font-bold uppercase mb-16">Selected Portfolio</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div class="border-2 border-black p-4 group cursor-pointer">
+          <div class="bg-gray-200 aspect-video mb-4 overflow-hidden">
+             <div class="w-full h-full flex items-center justify-center text-gray-400">Project Image</div>
+          </div>
+          <h3 class="text-2xl font-bold uppercase group-hover:underline">Project Title</h3>
+          <p class="text-gray-600">Short description of the tech stack used.</p>
+        </div>
 
-    <h1>MY PORTFOLIO</h1>
-
-
-
-    <div id="CONTACTME" class="contactme">
-
+        <div class="border-2 border-black p-4 group cursor-pointer">
+          <div class="bg-gray-200 aspect-video mb-4 flex items-center justify-center text-gray-400">
+             Project Image
+          </div>
+          <h3 class="text-2xl font-bold uppercase group-hover:underline">Project Title</h3>
+          <p class="text-gray-600">Short description of the tech stack used.</p>
+        </div>
+      </div>
     </div>
+  </section>
+
+  <footer id="contact" class="py-20 bg-black text-white text-center">
+    <h2 class="text-3xl font-bold uppercase mb-4">Get In Touch</h2>
+    <p class="mb-8 text-gray-400">Available for new opportunities in England and remotely.</p>
+    <a href="mailto:your-email@example.com" class="inline-block border-2 border-white px-8 py-3 uppercase font-bold hover:bg-white hover:text-black transition-colors">
+      Send an Email
+    </a>
+    <div class="mt-12 text-xs text-gray-500 uppercase tracking-widest">
+      &copy; 2026 Helder Ribeiro Lagrisola
+    </div>
+  </footer>
 
 </body>
-
 </html>
